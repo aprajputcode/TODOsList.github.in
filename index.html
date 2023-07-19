@@ -53,38 +53,45 @@
     </nav>
     <div class="container my-4 bg-dark" style="-webkit-text-fill-color: white;">
         <form>
-            <h2 class="text-center" > TODOs List</h2>
+            <h2 class="text-center"> TODOs List</h2>
             <div class="form-group">
                 <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" style="-webkit-text-fill-color: black;" aria-describedby="emailHelp" required>
+                <input type="text" class="form-control" id="title" style="-webkit-text-fill-color: black;"
+                    aria-describedby="emailHelp" required>
                 <small id="emailHelp" class="form-text text-muted">Add an item in list</small>
             </div>
             <div class="form-group">
                 <label for="description">Description</label>
-                <textarea class="form-control" id="description" rows="3" style="-webkit-text-fill-color: black;"></textarea>
+                <textarea class="form-control" id="description" rows="3"
+                    style="-webkit-text-fill-color: black;"></textarea>
             </div>
             <button class="btn btn-primary" id="add">Add to list</button>
             <button class="btn btn-primary" id="clear" onclick="clearList()">Clear list</button>
 
             <div id="items" class="my-4">
                 <h2>Your items</h2>
-            
-            <table class="table table-dark">
-                <thead >
-                    <tr>
-                        <th scope="col">SR No</th>
-                        <th scope="col">Title</th>
-                        <th scope="col">Description</th>
-                        <th scope="col">Action</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">                    
-                </tbody>
-            </table>
-            <b><p id="Note">Note: Please add list</p></b>
-            <br>
-        </div>
+
+                <table class="table table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">SR No</th>
+                            <th scope="col">Title</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                    </tbody>
+                </table>
+                <b>
+                    <p id="Note">Note: Please add list</p>
+                </b>
+                <br>
+            </div>
         </form>
+        <script async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7657079616952667"
+            crossorigin="anonymous"></script>
     </div>
 
 
@@ -100,14 +107,14 @@
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
     <script>
-        let Note="Please add list"
+        let Note = "Please add list"
         update();
         function getAndUpdate() {
             tit = document.getElementById('title').value;
             desc = document.getElementById('description').value;
-            
+
             console.log(tit.lenght)
-            if (tit!="") {
+            if (tit != "") {
                 if (localStorage.getItem('itemsJson') == null) {
                     itemJsonArray = [];
                     itemJsonArray.push([tit, desc]);
